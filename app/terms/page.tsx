@@ -54,8 +54,9 @@ export default function TermsOfService() {
 
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">3. Payment Terms</h2>
-                <p className="mb-2">Subscription fee: $150/month</p>
-                <p className="mb-2">Billing is automatic via Stripe.</p>
+                <p>
+                  Subscription fees are defined at the time of checkout and may vary depending on service tier or scope. Billing is processed automatically via Stripe on a recurring monthly basis unless otherwise agreed in writing.
+                </p>
                 <p>
                   Failure to pay may result in suspension of management services. Client retains ownership of all digital assets.
                 </p>
