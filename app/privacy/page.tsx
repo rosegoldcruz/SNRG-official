@@ -26,14 +26,15 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>
                 <p className="mb-4">
-                  We collect information you provide directly to us, such as when you create an account, request our
-                  services, or contact us for support.
+                  We collect information you provide directly to us when you contact us, subscribe to services,
+                  request support, or complete a payment.
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Contact information (name, email, phone number)</li>
-                  <li>Business information and requirements</li>
-                  <li>Communication preferences</li>
-                  <li>Usage data and analytics</li>
+                  <li>Business details relevant to onboarding and service delivery</li>
+                  <li>Account, billing, and transaction-related details</li>
+                  <li>Support communications and service requests</li>
+                  <li>Technical data such as IP address, browser type, and analytics data</li>
                 </ul>
               </section>
 
@@ -41,18 +42,63 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>
                 <p className="mb-4">We use the information we collect to:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Deliver managed security and infrastructure services</li>
-                  <li>Communicate service updates, security advisories, and support notices</li>
-                  <li>Monitor performance, uptime, and service reliability</li>
-                  <li>Comply with legal obligations</li>
+                  <li>Provide and manage digital infrastructure and support services</li>
+                  <li>Process recurring subscription billing and payment records</li>
+                  <li>Respond to support inquiries and troubleshoot technical issues</li>
+                  <li>Improve website performance, reliability, and user experience</li>
+                  <li>Send service updates, billing notices, and security communications</li>
+                  <li>Comply with legal, regulatory, and contractual obligations</li>
                 </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">How We Share Information</h2>
+                <p className="mb-4">We do not sell personal information. We may share information with:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Service providers that help us operate our business (for example: hosting and payment processors)</li>
+                  <li>Professional advisors and legal authorities when required by law</li>
+                  <li>Authorized client representatives as needed to deliver contracted services</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">Payments</h2>
+                <p>
+                  Payment transactions are processed by Stripe. We do not store full payment card details on our
+                  servers. Please review Stripe&apos;s privacy policy for details on how payment information is handled.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">Data Retention</h2>
+                <p>
+                  We retain personal information only as long as necessary to provide services, maintain business and
+                  financial records, resolve disputes, enforce agreements, and comply with legal obligations.
+                </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">Data Security</h2>
                 <p>
-                  We implement appropriate technical and organizational measures to protect your personal information
-                  against unauthorized access, alteration, disclosure, or destruction.
+                  We use commercially reasonable administrative, technical, and organizational safeguards to protect
+                  personal information. No method of transmission or storage is completely secure, and we cannot
+                  guarantee absolute security.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">Your Choices</h2>
+                <p>
+                  You may request to access, update, or delete personal information we hold about you, subject to
+                  applicable law and legitimate business needs. To make a request, contact us at the email below.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">Policy Updates</h2>
+                <p>
+                  We may update this Privacy Policy from time to time. Updates will be posted on this page with a
+                  revised effective date.
                 </p>
               </section>
 
