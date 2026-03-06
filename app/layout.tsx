@@ -7,8 +7,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'SNRG Labs | Elite Managed IT & Infrastructure',
-  description: 'Enterprise-grade managed security, cloud orchestration, and proactive infrastructure management for zero downtime operations.',
+  title: 'SNRG Labs | Revenue Engine CRM Systems for Home Services',
+  description:
+    'SNRG Labs installs Revenue Engine CRM systems for home service businesses using GoHighLevel, lead pipelines, automated response, call tracking, GBP optimization, and local SEO.',
   manifest: '/manifest.webmanifest',
   icons: {
     icon: [

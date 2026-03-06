@@ -7,11 +7,11 @@ import { ChevronDown } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
 const SERVICES = [
-  { name: "Compliance-Grade Defense", href: "/services/compliance-grade-defense" },
-  { name: "Cloud Orchestration", href: "/services/cloud-orchestration" },
-  { name: "Communication Infrastructure", href: "/services/communication-infrastructure" },
-  { name: "Proactive Management", href: "/services/proactive-management" },
-  { name: "Universal Infrastructure Support", href: "/services/universal-infrastructure-support" },
+  { name: "GoHighLevel CRM Systems", href: "/services#crm-infrastructure" },
+  { name: "Lead Pipelines & Automation", href: "/services#lead-capture-systems" },
+  { name: "Call Tracking & SMS Response", href: "/services#revenue-infrastructure" },
+  { name: "GBP Optimization", href: "/services#local-visibility" },
+  { name: "Local SEO", href: "/services#local-visibility" },
 ]
 
 const AnimatedNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
@@ -122,7 +122,8 @@ export function Navbar() {
   )
 
   const navLinksData = [
-    { label: "Reliability", href: "#testimonials" },
+    { label: "How It Works", href: "/#revenue-engine" },
+    { label: "Revenue Tracking", href: "/#services" },
   ]
 
   const loginButtonElement = (
@@ -130,7 +131,7 @@ export function Navbar() {
       href="tel:+14803648205"
       className="px-4 py-2 sm:px-3 text-xs sm:text-sm border border-[#333] bg-[rgba(31,31,31,0.62)] text-gray-300 rounded-full hover:border-white/50 hover:text-white transition-colors duration-200 w-full sm:w-auto text-center"
     >
-      Call Us
+      Call Now
     </a>
   )
 
@@ -144,9 +145,12 @@ export function Navbar() {
                      transition-all duration-300 ease-out
                      group-hover:opacity-60 group-hover:blur-xl group-hover:-m-3"
       ></div>
-      <button className="relative z-10 px-4 py-2 sm:px-3 text-xs sm:text-sm font-semibold text-white bg-gradient-to-br from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 w-full sm:w-auto">
-        Get Quote
-      </button>
+      <Link
+        href="/contact"
+        className="relative z-10 block px-4 py-2 sm:px-3 text-xs sm:text-sm font-semibold text-white bg-gradient-to-br from-blue-400 to-blue-600 rounded-full hover:from-blue-500 hover:to-blue-700 transition-all duration-200 w-full sm:w-auto text-center"
+      >
+        Book System Review
+      </Link>
     </div>
   )
 
