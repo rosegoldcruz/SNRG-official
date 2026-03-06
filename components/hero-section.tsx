@@ -40,25 +40,19 @@ interface GridBurst {
 
 export function HeroSection() {
   const [displayedText1, setDisplayedText1] = useState("")
-  const [displayedText2, setDisplayedText2] = useState("")
   const [isTypingDone, setIsTypingDone] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const dashboardRef = useRef<HTMLDivElement>(null)
   const [dashboardAnimated, setDashboardAnimated] = useState(false)
 
-  const text1 = "Install the System"
-  const text2 = "That Turns Leads Into Revenue"
+  const text1 = "Websites That Drive Real Business"
 
   useEffect(() => {
     let currentIndex = 0
-    const fullText = text1 + "|" + text2 // Use | as separator
 
     const typeInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        const currentChar = fullText.substring(0, currentIndex)
-        const parts = currentChar.split("|")
-        setDisplayedText1(parts[0] || "")
-        setDisplayedText2(parts[1] || "")
+      if (currentIndex <= text1.length) {
+        setDisplayedText1(text1.substring(0, currentIndex))
         currentIndex++
       } else {
         clearInterval(typeInterval)
@@ -420,50 +414,40 @@ export function HeroSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Revenue Infrastructure for Home Service Businesses
+            Web Development + Lead Systems
           </div>
 
           <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl relative">
             <span className="invisible" aria-hidden="true">
-              <span className="text-balance">Install the System</span>
-              <br />
-              <span className="text-balance">That Turns Leads Into Revenue</span>
+              <span className="text-balance">Websites That Drive Real Business</span>
             </span>
 
-            <span className="absolute inset-0 flex flex-col items-center">
-              <span className="text-balance bg-gradient-to-r from-[#FFEFBA] to-[#FFFFFF] bg-clip-text text-transparent">
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="text-balance bg-gradient-to-r from-[#FFEFBA] via-[#FFFFFF] to-[#F16529] bg-clip-text text-transparent">
                 {displayedText1}
-                {displayedText2 === "" && (
-                  <span className="inline-block w-[3px] h-[0.9em] bg-accent ml-1 animate-pulse" />
-                )}
-              </span>
-              <span className="text-balance bg-gradient-to-r from-[#E44D26] to-[#F16529] bg-clip-text text-transparent">
-                {displayedText2}
-                {displayedText2 !== "" && (
-                  <span
-                    className={`inline-block w-[3px] h-[0.9em] bg-accent ml-1 ${
-                      isTypingDone ? "animate-blink" : "animate-pulse"
-                    }`}
-                  />
-                )}
+                <span
+                  className={`inline-block w-[3px] h-[0.9em] bg-accent ml-1 ${
+                    isTypingDone ? "animate-blink" : "animate-pulse"
+                  }`}
+                />
               </span>
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-5xl text-lg text-muted-foreground sm:text-xl lg:text-2xl">
-            We build Revenue Engine CRM systems for home service businesses using GoHighLevel, automated lead
-            pipelines, call tracking, and local SEO — so every call, form, and message turns into measurable revenue.
+            SNRG Labs designs and builds modern business websites and installs the systems that turn traffic into
+            real leads — including analytics, ad tracking, CRM integrations, and call infrastructure.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" className="w-full sm:w-auto" asChild>
               <Link href="/contact">
-                Book a System Review
+                Start a Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent" asChild>
-              <Link href="#revenue-engine">See How It Works</Link>
+              <Link href="#services">View Services</Link>
             </Button>
           </div>
 

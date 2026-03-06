@@ -1,37 +1,66 @@
-import { ArrowDown, BarChart3, Bot, PhoneCall, Route, Search } from "lucide-react"
+import Link from "next/link"
 
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
-import { StatsSection } from "@/components/stats-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { FeaturesSection } from "@/components/features-section"
-import { DeveloperExperience } from "@/components/developer-experience"
-import { CodeSection } from "@/components/code-section"
-import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-const problemPoints = [
-  "Leads falling through the cracks",
-  "Slow response times",
-  "Disconnected systems",
-  "No visibility into where revenue comes from",
+const aboutServices = [
+  "Website development",
+  "Lead capture systems",
+  "Marketing tracking infrastructure",
+  "Advertising integrations",
+  "Call and CRM setup",
 ]
 
-const revenuePipeline = [
-  "Traffic Sources",
-  "Website / Landing Pages",
-  "CRM Capture (GoHighLevel)",
-  "Automated SMS / Call Follow-Up",
-  "Pipeline Tracking",
-  "Closed Jobs",
+const primaryServices = [
+  {
+    title: "Website Development",
+    description: "Custom business websites designed and built for performance.",
+    items: ["Responsive design", "Fast loading pages", "SEO-friendly structure", "Conversion-focused layouts"],
+  },
+  {
+    title: "Lead Capture Systems",
+    description: "Systems that turn website traffic into leads.",
+    items: ["Landing pages", "Form capture systems", "Click-to-call integration", "Appointment request systems"],
+  },
+  {
+    title: "Marketing Infrastructure",
+    description: "Install the tracking systems businesses need to measure growth.",
+    items: ["Meta Pixel installation", "Google Analytics setup", "Ad conversion tracking", "Campaign attribution"],
+  },
+  {
+    title: "Automation & CRM Setup",
+    description: "Basic automation and CRM infrastructure so businesses can manage incoming leads.",
+    items: ["CRM integrations", "Lead pipelines", "Automated follow-up systems", "Call tracking setups"],
+  },
 ]
 
-const revenueVisibilityPoints = [
-  "Where leads originate",
-  "How fast they’re contacted",
-  "Which jobs close",
-  "Which marketing sources generate revenue",
+const pricingGroups = [
+  {
+    title: "Website Builds",
+    rows: [
+      { name: "Starter Business Website", price: "$500 – $1,500" },
+      { name: "Custom Business Website", price: "$1,500 – $3,500" },
+      { name: "Advanced Build + Lead Systems", price: "$3,500+" },
+    ],
+  },
+  {
+    title: "Infrastructure Setup",
+    rows: [
+      { name: "Analytics & Tracking Install", price: "$300 – $800" },
+      { name: "CRM & Lead Pipeline Setup", price: "$800 – $2,000" },
+      { name: "Ad Tracking & Pixel Integration", price: "$300 – $700" },
+    ],
+  },
+  {
+    title: "Monthly Support",
+    rows: [
+      { name: "Website Hosting & Maintenance", price: "$100 – $300/month" },
+      { name: "Lead System Monitoring & Updates", price: "$300 – $1,000/month" },
+    ],
+  },
 ]
 
 export default function HomePage() {
@@ -39,142 +68,124 @@ export default function HomePage() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <HeroSection />
-      <StatsSection />
-      <TestimonialsSection />
-      <FeaturesSection />
 
-      <section id="problem" className="border-y border-border/40 bg-card/20 py-24 sm:py-24">
+      <section id="about" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
             <div className="space-y-4">
-              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">The Problem</h2>
+              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">About SNRG Labs</h2>
               <p className="text-muted-foreground">
-                Most home service companies lose revenue because their lead handling systems are fragmented.
+                SNRG Labs is a web development and digital systems studio focused on building websites that actually
+                support business growth.
               </p>
-              <div className="grid gap-3">
-                {problemPoints.map((point) => (
-                  <div key={point} className="flex items-start gap-3 rounded-lg border border-border/60 bg-card/50 px-4 py-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-                    <p>{point}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="text-muted-foreground">
+                Beyond design and development, SNRG installs the core infrastructure businesses need to track leads,
+                run ads, and convert traffic into customers.
+              </p>
             </div>
 
             <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
               <CardHeader>
-                <CardTitle className="text-2xl">SNRG installs the infrastructure that fixes this.</CardTitle>
+                <CardTitle className="text-xl">Services include:</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 text-muted-foreground">
-                <p>
-                  We install lead capture, automated response, CRM pipelines, and revenue tracking so every call,
-                  form, and message is captured, routed, and measured.
-                </p>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                    <Bot className="mb-2 h-5 w-5 text-accent" />
-                    <p className="text-sm">Automated lead response</p>
-                  </div>
-                  <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                    <Route className="mb-2 h-5 w-5 text-accent" />
-                    <p className="text-sm">Lead routing & integrations</p>
-                  </div>
-                  <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                    <PhoneCall className="mb-2 h-5 w-5 text-accent" />
-                    <p className="text-sm">Call tracking + SMS follow-up</p>
-                  </div>
-                  <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                    <Search className="mb-2 h-5 w-5 text-accent" />
-                    <p className="text-sm">GBP + local SEO systems</p>
-                  </div>
-                </div>
+              <CardContent>
+                <ul className="space-y-2 text-muted-foreground">
+                  {aboutServices.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      <section id="revenue-engine" className="py-24 sm:py-24">
+      <section id="services" className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl space-y-3 text-center">
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">The Revenue Engine</h2>
-            <p className="text-muted-foreground">
-              One connected system from traffic to closed jobs, with every stage visible and measurable.
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Services</h2>
+            <p className="mt-4 text-muted-foreground">Clear systems built for real business outcomes.</p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-2">
+            {primaryServices.map((service) => (
+              <Card key={service.title} className="border-border/60 bg-card/50 text-foreground shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-2 text-xs font-medium uppercase tracking-wider text-accent">Includes</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    {service.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Pricing</h2>
+            <p className="mt-4 text-muted-foreground">Simple baseline pricing for builds and systems setup.</p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3">
+            {pricingGroups.map((group) => (
+              <Card key={group.title} className="border-border/60 bg-card/50 text-foreground shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-xl">{group.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {group.rows.map((row) => (
+                    <div key={row.name} className="rounded-lg border border-border/50 bg-background/50 p-3">
+                      <p className="text-sm text-foreground">{row.name}</p>
+                      <p className="mt-1 font-mono text-sm text-accent">{row.price}</p>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-card/40 p-10 text-center">
+            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Need a Website or Lead System Built?</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              SNRG Labs helps businesses launch modern websites and install the infrastructure needed to capture and
+              convert leads.
             </p>
-          </div>
-
-          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-border/60 bg-card/50 p-6">
-            <div className="space-y-2">
-              {revenuePipeline.map((step, index) => (
-                <div key={step} className="flex flex-col items-center">
-                  <div className="w-full rounded-lg border border-border/60 bg-background/60 px-4 py-3 text-center text-sm font-medium md:text-base">
-                    {step}
-                  </div>
-                  {index < revenuePipeline.length - 1 && <ArrowDown className="my-2 h-4 w-4 text-accent" />}
-                </div>
-              ))}
+            <div className="mt-8">
+              <Button asChild size="lg" className="rounded-full">
+                <Link href="/contact">Start Your Project</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <DeveloperExperience />
-      <CodeSection />
-
-      <section id="tracking" className="border-y border-border/40 bg-card/20 py-24 sm:py-24">
+      <section className="pb-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-4">
-              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Know Where Every Dollar Comes From</h2>
-              <p className="text-muted-foreground">
-                SNRG systems show where every lead comes from, how quickly it gets contacted, and which sources create
-                real revenue.
-              </p>
-              <ul className="space-y-3">
-                {revenueVisibilityPoints.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-xl">
-                  <BarChart3 className="h-5 w-5 text-accent" />
-                  Revenue Dashboard View
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-sm text-muted-foreground">
-                <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                  <p className="text-foreground">Lead Source Performance</p>
-                  <p className="mt-1">Google Business Profile, Local SEO, Paid Ads, Referral</p>
-                </div>
-                <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                  <p className="text-foreground">Speed-to-Lead Tracking</p>
-                  <p className="mt-1">First response time by channel and team member</p>
-                </div>
-                <div className="rounded-lg border border-border/60 bg-background/60 p-4">
-                  <p className="text-foreground">Pipeline-to-Revenue Attribution</p>
-                  <p className="mt-1">Which sources close and what they are worth</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="mx-auto max-w-4xl text-center text-xl font-medium md:text-2xl">
-            SNRG Labs installs the infrastructure that turns marketing into measurable revenue.
+          <p className="mx-auto max-w-4xl text-center text-lg font-medium md:text-xl">
+            SNRG Labs builds websites and installs the systems businesses need to generate and track leads.
           </p>
         </div>
       </section>
 
-      <CTASection />
       <Footer />
     </main>
   )

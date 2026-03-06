@@ -10,7 +10,7 @@ const enterpriseFeatures = [
   {
     icon: Shield,
     title: "Total Compliance",
-    description: "Built-in STIR/SHAKEN, TCPA, and HIPAA-ready infrastructure to keep your operation legal.",
+    description: "Built-in compliance guardrails and governance workflows to keep your operation legal.",
   },
   {
     icon: Headphones,
@@ -58,7 +58,7 @@ export function EnterpriseSection() {
         <div className="mx-auto mt-16 max-w-2xl rounded-2xl border border-accent/40 bg-gradient-to-b from-accent/10 to-transparent p-8 text-center sm:p-12">
           <h3 className="font-mono text-xl font-bold">Ready to scale?</h3>
           <p className="mt-4 text-muted-foreground">
-            Talk to our sales team to learn how AEONDial can power your enterprise.
+            Talk to our team to learn how SNRG Labs can power your revenue operations.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button size="lg">Contact Sales</Button>

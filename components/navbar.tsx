@@ -33,32 +33,32 @@ export function Navbar() {
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             <a
-              href="#problem"
-              onClick={(e) => handleSmoothScroll(e, "#problem")}
+              href="#about"
+              onClick={(e) => handleSmoothScroll(e, "#about")}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground cursor-pointer"
             >
-              The Problem
+              About
             </a>
             <a
-              href="#revenue-engine"
-              onClick={(e) => handleSmoothScroll(e, "#revenue-engine")}
+              href="#services"
+              onClick={(e) => handleSmoothScroll(e, "#services")}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground cursor-pointer"
             >
-              Revenue Engine
+              Services
             </a>
             <a
-              href="#features"
-              onClick={(e) => handleSmoothScroll(e, "#features")}
+              href="#pricing"
+              onClick={(e) => handleSmoothScroll(e, "#pricing")}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground cursor-pointer"
             >
-              What We Install
+              Pricing
             </a>
             <a
-              href="#tracking"
-              onClick={(e) => handleSmoothScroll(e, "#tracking")}
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "#contact")}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground cursor-pointer"
             >
-              Revenue Tracking
+              Contact
             </a>
             <Link href="/terms" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Terms
@@ -73,7 +73,7 @@ export function Navbar() {
             <a href="tel:+14803648205">Call Now</a>
           </Button>
           <Button size="sm" asChild>
-            <Link href={contactUrl}>Book System Review</Link>
+            <Link href={contactUrl}>Start a Project</Link>
           </Button>
         </div>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
@@ -84,32 +84,32 @@ export function Navbar() {
         <div className="border-t border-border/40 bg-background md:hidden">
           <nav className="flex flex-col gap-4 px-4 py-6">
             <a
-              href="#problem"
-              onClick={(e) => handleSmoothScroll(e, "#problem")}
+              href="#about"
+              onClick={(e) => handleSmoothScroll(e, "#about")}
               className="text-sm text-muted-foreground cursor-pointer"
             >
-              The Problem
+              About
             </a>
             <a
-              href="#revenue-engine"
-              onClick={(e) => handleSmoothScroll(e, "#revenue-engine")}
+              href="#services"
+              onClick={(e) => handleSmoothScroll(e, "#services")}
               className="text-sm text-muted-foreground cursor-pointer"
             >
-              Revenue Engine
+              Services
             </a>
             <a
-              href="#features"
-              onClick={(e) => handleSmoothScroll(e, "#features")}
+              href="#pricing"
+              onClick={(e) => handleSmoothScroll(e, "#pricing")}
               className="text-sm text-muted-foreground cursor-pointer"
             >
-              What We Install
+              Pricing
             </a>
             <a
-              href="#tracking"
-              onClick={(e) => handleSmoothScroll(e, "#tracking")}
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "#contact")}
               className="text-sm text-muted-foreground cursor-pointer"
             >
-              Revenue Tracking
+              Contact
             </a>
             <Link href="/terms" onClick={() => setIsOpen(false)} className="text-sm text-muted-foreground">
               Terms
@@ -122,7 +122,7 @@ export function Navbar() {
                 <a href="tel:+14803648205">Call Now</a>
               </Button>
               <Button size="sm" asChild>
-                <Link href={contactUrl}>Book System Review</Link>
+                <Link href={contactUrl}>Start a Project</Link>
               </Button>
             </div>
           </nav>

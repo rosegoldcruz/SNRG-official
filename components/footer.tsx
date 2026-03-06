@@ -1,20 +1,20 @@
 import Link from "next/link"
 
 const productLinks = [
-  { label: "Revenue Engine", href: "#revenue-engine" },
-  { label: "What We Install", href: "#features" },
-  { label: "Revenue Tracking", href: "#tracking" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Pricing", href: "#pricing" },
 ]
 
 const supportLinks = [
-  { label: "Book System Review", href: "/contact" },
+  { label: "Start Your Project", href: "/contact" },
   { label: "Call Now", href: "tel:+14803648205" },
 ]
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
-  { label: "Revenue Infrastructure", href: "/services" },
+  { label: "Services", href: "/services" },
 ]
 
 export function Footer() {
@@ -30,7 +30,7 @@ export function Footer() {
               <span className="text-lg font-semibold tracking-tight font-mono">SNRG Labs</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Revenue infrastructure for home service businesses.
+              Websites and digital systems built to generate and track real leads.
             </p>
 
             <div>
@@ -79,7 +79,7 @@ export function Footer() {
             © {new Date().getFullYear()} SNRG Labs. All rights reserved.
           </p>
           <p className="mt-2 text-center text-sm text-muted-foreground">
-            SNRG Labs installs the infrastructure that turns marketing into measurable revenue.
+            SNRG Labs builds websites and installs the systems businesses need to generate and track leads.
           </p>
         </div>
       </div>
