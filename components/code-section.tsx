@@ -38,7 +38,7 @@ function AutomatedPulseFlow() {
 
           <text x="120" y="80" textAnchor="middle" fill="#d4d4d8" fontSize="13">Facebook Ads</text>
           <text x="120" y="170" textAnchor="middle" fill="#d4d4d8" fontSize="13">Web Leads</text>
-          <text x="380" y="125" textAnchor="middle" fill="#fb923c" fontSize="14">SNRG CRM Hub</text>
+          <text x="380" y="125" textAnchor="middle" fill="#fb923c" fontSize="14">Revenue Engine</text>
           <text x="630" y="125" textAnchor="middle" fill="#22c55e" fontSize="14">Sold</text>
 
           <path d="M200 75 C 245 75, 250 110, 290 120" fill="none" stroke="#3f3f46" strokeWidth="3" />
@@ -198,10 +198,11 @@ export function CodeSection() {
             <p className="text-sm font-medium uppercase tracking-wider text-accent">The Engine</p>
           </div>
           <h2 className="mt-2 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-            High-Velocity Call Center in a Box
+            High-Velocity Revenue Engine
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Every lead source, dial, qualification, and booking action moves through one instant automation engine.
+            Every lead source, response, qualification, and booking action moves through one automated system designed
+            to capture and convert opportunities in real time.
           </p>
           <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/70 px-4 py-1.5 text-sm">
             <CircleDot className="h-3.5 w-3.5 text-orange-400" />
