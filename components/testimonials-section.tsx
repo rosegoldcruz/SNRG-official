@@ -2,34 +2,52 @@
 
 const testimonials = [
   {
-    company: "Kingpin Roofing",
+    company: "G3 Home Remodel",
     quote:
-      "We were losing calls after-hours and missing form submissions. SNRG installed our CRM pipeline and automated SMS response, and now every lead gets touched immediately.",
-    byline: "Operations Lead, Kingpin Roofing",
+      "SNRG cleaned up our lead flow, rebuilt our follow-up process, and made it easy for our team to track every opportunity from first call to signed job.",
+    byline: "Todd Gentner, G3 Home Remodel",
   },
   {
-    company: "G3 Home Remodels",
+    company: "Raw2Recruited",
     quote:
-      "Before SNRG, we had no real pipeline visibility. Now we can see where each lead came from, how fast we responded, and which campaigns actually produced closed jobs.",
-    byline: "General Manager, G3 Home Remodels",
+      "SNRG gave us a full operating system for inbound leads and client communication. We respond faster, miss less, and close with a lot more consistency.",
+    byline: "Dylan Katzenburger, Raw2Recruited",
   },
   {
-    company: "Elite HVAC",
+    company: "RefaceKit",
     quote:
-      "SNRG connected call tracking, forms, and our GoHighLevel pipeline. We stopped guessing and started managing a real revenue system.",
-    byline: "Owner, Elite HVAC",
+      "What used to be scattered across texts and sticky notes is now organized, automated, and measurable. SNRG built a process we can actually scale.",
+    byline: "Chris Montoya, RefaceKit",
   },
   {
-    company: "Precision Cabinets",
+    company: "Vulpine Homes",
     quote:
-      "Our speed-to-lead changed overnight. Automated response plus lead routing gave our team a repeatable process that closes more jobs every month.",
-    byline: "Sales Director, Precision Cabinets",
+      "SNRG helped us tighten up our sales pipeline and follow-up cadence. We can now see exactly where deals stall and fix issues before revenue slips.",
+    byline: "Michael Musonda, Vulpine Homes",
   },
   {
-    company: "Rapid Restore",
+    company: "Freedom Kitchen and Bath",
     quote:
-      "SNRG installed the infrastructure that made our marketing measurable. We now know exactly which sources generate revenue and where leads were leaking.",
-    byline: "Founder, Rapid Restore",
+      "From intake to estimate to close, everything is smoother. SNRG set up the automations and reporting so we always know what is working.",
+    byline: "Jim Galdea, Freedom Kitchen and Bath",
+  },
+  {
+    company: "Renew Cabinets",
+    quote:
+      "As an installer partner, I needed cleaner communication and fewer dropped handoffs. SNRG made referrals, scheduling, and follow-up feel seamless.",
+    byline: "Chris Botta, Renew Cabinets",
+  },
+  {
+    company: "American MPS",
+    quote:
+      "SNRG put structure around our outreach and lead tracking so our team can move fast without losing visibility. It has been a major upgrade for operations.",
+    byline: "Scott Topps, American MPS",
+  },
+  {
+    company: "The Driftwoods AZ",
+    quote:
+      "SNRG helped us tighten response times and standardize follow-up, which made our pipeline easier to manage and improved conversion from inbound leads.",
+    byline: "Michael Brown, The Driftwoods AZ",
   },
 ]
 
