@@ -32,55 +32,113 @@ const AnimatedNavLink = ({ href, children }: { href: string; children: React.Rea
 const ServicesDropdown = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement | null>(null)
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const itemRefs = useRef<Array<HTMLAnchorElement | null>>([])
+
+  const clearCloseTimeout = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+  }
+
+  const openDropdown = () => {
+    clearCloseTimeout()
+    setIsServicesOpen(true)
+  }
+
+  const closeDropdown = () => {
+    clearCloseTimeout()
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsServicesOpen(false)
+    }, 120)
+  }
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        clearCloseTimeout()
         setIsServicesOpen(false)
       }
     }
 
     document.addEventListener("mousedown", handleOutsideClick)
     return () => {
+      clearCloseTimeout()
       document.removeEventListener("mousedown", handleOutsideClick)
     }
   }, [])
+
+  const handleTriggerKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault()
+      openDropdown()
+      itemRefs.current[0]?.focus()
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault()
+      clearCloseTimeout()
+      setIsServicesOpen(false)
+    }
+  }
 
   return (
     <div
       ref={dropdownRef}
       className="relative"
-      onMouseEnter={() => setIsServicesOpen(true)}
-      onMouseLeave={() => setIsServicesOpen(false)}
+      onMouseEnter={openDropdown}
+      onMouseLeave={closeDropdown}
     >
       <button
         className="flex items-center gap-1 text-sm text-gray-300 hover:text-white transition-colors"
         aria-label="Open services menu"
         aria-expanded={isServicesOpen}
         aria-haspopup="menu"
-        onClick={() => setIsServicesOpen((prev) => !prev)}
+        onClick={() => {
+          if (isServicesOpen) {
+            clearCloseTimeout()
+            setIsServicesOpen(false)
+            return
+          }
+
+          openDropdown()
+        }}
+        onKeyDown={handleTriggerKeyDown}
       >
         <span>Services</span>
         <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
       </button>
 
       <div
-        className={`absolute left-0 top-full mt-3 w-72 rounded-lg border border-white/10 bg-[#0a0a0a] p-2 shadow-2xl z-50 transition-all duration-200 ${
+        className={`absolute left-0 top-full w-72 pt-3 z-50 transition-all duration-200 ${
           isServicesOpen
             ? "visible opacity-100 translate-y-0 pointer-events-auto"
             : "invisible opacity-0 translate-y-1 pointer-events-none"
         }`}
       >
-        {SERVICES.map((service) => (
-          <Link
-            key={service.href}
-            href={service.href}
-            className="block rounded-md px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all"
-            onClick={() => setIsServicesOpen(false)}
-          >
-            {service.name}
-          </Link>
-        ))}
+        <div className="rounded-lg border border-white/10 bg-[#0a0a0a] p-2 shadow-2xl">
+          {SERVICES.map((service, index) => (
+            <Link
+              key={service.href}
+              href={service.href}
+              ref={(element) => {
+                itemRefs.current[index] = element
+              }}
+              className="block rounded-md px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all"
+              onClick={() => setIsServicesOpen(false)}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  event.preventDefault()
+                  clearCloseTimeout()
+                  setIsServicesOpen(false)
+                }
+              }}
+            >
+              {service.name}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   )
