@@ -27,23 +27,23 @@ export function Footer() {
         className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
       >
         {/* outer glow halo */}
-        <div className="absolute h-[680px] w-[680px] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.12)_0%,rgba(6,182,212,0.06)_45%,transparent_70%)] blur-3xl" />
+        <div className="absolute h-[680px] w-[680px] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.22)_0%,rgba(6,182,212,0.12)_45%,transparent_70%)] blur-3xl" />
         {/* the logo itself */}
         <img
           src="/snrg.svg"
           alt=""
           width={640}
           height={640}
-          className="h-[640px] w-[640px] opacity-[0.11]"
+          className="h-[640px] w-[640px] opacity-[0.28]"
           style={{ mixBlendMode: "screen", animation: "globe-drift 18s ease-in-out infinite alternate" }}
         />
       </div>
 
       <style>{`
         @keyframes globe-drift {
-          0%   { transform: scale(1)    rotate(-1deg); opacity: 0.09; }
-          50%  { transform: scale(1.04) rotate( 1deg); opacity: 0.13; }
-          100% { transform: scale(1)    rotate(-1deg); opacity: 0.09; }
+          0%   { transform: scale(1)    rotate(-1deg); opacity: 0.22; }
+          50%  { transform: scale(1.05) rotate( 1deg); opacity: 0.32; }
+          100% { transform: scale(1)    rotate(-1deg); opacity: 0.22; }
         }
       `}</style>
 
