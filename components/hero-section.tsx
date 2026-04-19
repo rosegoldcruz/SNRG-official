@@ -45,7 +45,7 @@ export function HeroSection() {
   const dashboardRef = useRef<HTMLDivElement>(null)
   const [dashboardAnimated, setDashboardAnimated] = useState(false)
 
-  const text1 = "Websites That Drive Real Business"
+  const text1 = "We Build Revenue Engines."
 
   useEffect(() => {
     let currentIndex = 0
@@ -414,7 +414,7 @@ export function HeroSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Web Development + Lead Systems
+            Revenue Systems + Automation
           </div>
 
           <h1 className="font-mono text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl relative">
@@ -437,20 +437,20 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" className="w-full sm:w-auto" asChild>
               <Link href="/contact">
-                Start a Project
+                Build My System
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent" asChild>
-              <Link href="#services">View Services</Link>
+              <Link href="#services">See What We Build</Link>
             </Button>
           </div>
         </div>
 
         <div className="mx-auto mt-8 max-w-5xl text-center" id="hero-support">
           <p className="mx-auto max-w-5xl text-lg text-muted-foreground sm:text-xl lg:text-2xl">
-            SNRG Labs designs and builds modern business websites and installs the systems that turn traffic into
-            real leads — including analytics, ad tracking, CRM integrations, and call infrastructure.
+            CRM systems, dialers, automations, websites, and follow-up infrastructure — for businesses tired of leaks,
+            delays, and manual chaos.
           </p>
 
           <div className="mx-auto mt-10 grid max-w-5xl gap-4 text-left sm:grid-cols-2 lg:grid-cols-3">
@@ -461,7 +461,7 @@ export function HeroSection() {
               <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">CRM Infrastructure</p>
               <h3 className="mt-2 text-lg font-semibold">GoHighLevel + Pipeline Design</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Complete CRM setup, lead routing, and automation workflows installed for contractor teams.
+                Full pipeline design, automated follow-up sequences, and lead routing so no lead falls through the cracks.
               </p>
             </div>
 
@@ -472,7 +472,7 @@ export function HeroSection() {
               <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Lead Capture Systems</p>
               <h3 className="mt-2 text-lg font-semibold">Call Tracking + SMS Follow-Up</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Capture every form and inbound call, then trigger immediate automated responses.
+                Every call tracked, every form captured. Instant SMS follow-up fires the moment a lead hits your system.
               </p>
             </div>
 
@@ -483,7 +483,7 @@ export function HeroSection() {
               <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Revenue Tracking</p>
               <h3 className="mt-2 text-lg font-semibold">Know Where Every Dollar Comes From</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Track lead source, contact speed, pipeline movement, and closed-job revenue in one dashboard.
+                See which ad, call, or campaign closed the deal. Full attribution from first touch to closed job.
               </p>
             </div>
           </div>

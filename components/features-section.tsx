@@ -2,19 +2,29 @@
 
 import type React from "react"
 
-import { PhoneCall, MapPinned, BarChart3, Workflow, Sparkles } from "lucide-react"
+import { PhoneCall, MapPinned, BarChart3, Workflow, Sparkles, Radio, Globe } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const features = [
   {
     icon: Workflow,
     title: "CRM Infrastructure",
-    description: "GoHighLevel setup, pipeline design, automation workflows, and lead routing.",
+    description: "GoHighLevel pipelines, lead routing, automated follow-up sequences, booking flows, and reporting.",
   },
   {
     icon: PhoneCall,
     title: "Lead Capture Systems",
-    description: "High-conversion landing pages, call tracking, form integrations, and SMS response.",
+    description: "High-conversion landing pages, call tracking, form integrations, and instant SMS response.",
+  },
+  {
+    icon: Radio,
+    title: "Outbound Machines",
+    description: "Predictive dialers, telephony setup, agent workflows, compliance systems, QA scripts, and call queues.",
+  },
+  {
+    icon: Globe,
+    title: "Conversion Assets",
+    description: "High-converting websites, landing pages, funnels, reputation systems, and retargeting infrastructure.",
   },
   {
     icon: MapPinned,
@@ -24,7 +34,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Revenue Tracking",
-    description: "Pipeline analytics, conversion tracking, and lead attribution tied to real revenue.",
+    description: "Pipeline analytics, conversion tracking, and lead attribution tied to real closed revenue.",
   },
 ]
 
@@ -98,10 +108,10 @@ export function FeaturesSection() {
             <span className="font-mono uppercase tracking-wider">What We Install</span>
           </div>
           <h2 className="mt-4 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-            Revenue Infrastructure built for contractor workflows
+            Revenue Infrastructure. Outbound Machines. Conversion Assets.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Practical CRM and automation systems designed for home service companies doing $500k–$10M/year.
+            For operators in home services, real estate, mortgage, sales, and local business. We don't hand you software — we deploy outcomes.
           </p>
         </div>
 

@@ -201,8 +201,8 @@ export function CodeSection() {
             High-Velocity Revenue Engine
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Every lead source, response, qualification, and booking action moves through one automated system designed
-            to capture and convert opportunities in real time.
+            Missed calls, slow follow-up, low close rates — these aren't demand problems. They're systems problems.
+            We build the machine that fixes them.
           </p>
           <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/70 px-4 py-1.5 text-sm">
             <CircleDot className="h-3.5 w-3.5 text-orange-400" />

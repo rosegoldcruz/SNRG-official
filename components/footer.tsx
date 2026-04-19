@@ -30,7 +30,7 @@ export function Footer() {
               <span className="text-lg font-semibold tracking-tight font-mono">SNRG Labs</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Websites and digital systems built to generate and track real leads.
+              Revenue systems for businesses stuck in manual chaos.
             </p>
 
             <div>
@@ -79,7 +79,7 @@ export function Footer() {
             © {new Date().getFullYear()} SNRG Labs. All rights reserved.
           </p>
           <p className="mt-2 text-center text-sm text-muted-foreground">
-            SNRG Labs builds websites and installs the systems businesses need to generate and track leads.
+            SNRG Labs builds revenue systems. Automation, telephony, lead systems, websites, follow-up, and conversion infrastructure.
           </p>
         </div>
       </div>

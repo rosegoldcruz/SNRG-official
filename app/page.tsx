@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
@@ -11,41 +14,51 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+}
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+}
+
 const leakPoints = [
-  "Leads falling through the cracks",
-  "Slow response times after calls and forms",
-  "Disconnected systems between ads, site, and CRM",
-  "No visibility into where revenue comes from",
+  "Leads coming in but nobody following up fast enough",
+  "Phones not converting — staff wasting time on unqualified calls",
+  "Too many tools with no system connecting them",
+  "Business running on memory instead of data",
 ]
 
 const aboutServices = [
-  "Website development",
-  "Lead capture systems",
-  "Marketing tracking infrastructure",
-  "Advertising integrations",
-  "Call and CRM setup",
+  "Revenue-focused website development",
+  "Lead capture and routing infrastructure",
+  "Full marketing attribution and tracking",
+  "Ad-to-CRM integrations",
+  "Telephony, dialer, and CRM deployment",
 ]
 
 const primaryServices = [
   {
     title: "Website Development",
-    description: "Custom business websites designed and built for performance.",
-    items: ["Responsive design", "Fast loading pages", "SEO-friendly structure", "Conversion-focused layouts"],
+    description: "High-converting websites built to turn traffic into leads — not win design awards.",
+    items: ["Mobile-first, fast-loading design", "Conversion-focused page architecture", "Local SEO and map ranking structure", "Click-to-call and booking flow integrations"],
   },
   {
     title: "Lead Capture Systems",
-    description: "Systems that turn website traffic into leads.",
-    items: ["Landing pages", "Form capture systems", "Click-to-call integration", "Appointment request systems"],
+    description: "Every form, call, and click captured and routed to the right place — instantly.",
+    items: ["High-conversion landing pages and funnels", "Form capture with instant SMS alerts", "Click-to-call and call tracking", "Appointment booking and calendar sync"],
   },
   {
     title: "Marketing Infrastructure",
-    description: "Install the tracking systems businesses need to measure growth.",
-    items: ["Meta Pixel installation", "Google Analytics setup", "Ad conversion tracking", "Campaign attribution"],
+    description: "Attribution that shows you exactly which ad, campaign, or channel is closing deals.",
+    items: ["Meta and Google Pixel installation", "Full GA4 and conversion tracking", "Offline conversion imports", "Lead source attribution to closed revenue"],
   },
   {
     title: "Automation & CRM Setup",
-    description: "Basic automation and CRM infrastructure so businesses can manage incoming leads.",
-    items: ["CRM integrations", "Lead pipelines", "Automated follow-up systems", "Call tracking setups"],
+    description: "The pipeline, follow-up, and dialer infrastructure that stops leads from dying after the first touch.",
+    items: ["GoHighLevel CRM setup and configuration", "Sales pipeline and stage design", "Multi-touch automated follow-up sequences", "Power dialer and call tracking setup"],
   },
 ]
 
@@ -83,98 +96,87 @@ export default function HomePage() {
       <StatsSection />
       <TestimonialsSection />
 
-      <section id="problem" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
+      <motion.section
+        id="problem"
+        className="border-y border-border/40 bg-card/20 py-20 sm:py-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeUp}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
             <div className="space-y-4">
-              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Where Leads Leak</h2>
+              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Where Revenue Gets Left on the Table</h2>
               <p className="text-muted-foreground">
-                Most businesses don’t have a demand problem. They have a systems problem.
+                When growth stalls, it's rarely because of a lack of demand. It's the system behind it.
               </p>
-              <div className="grid gap-3">
+              <motion.div className="grid gap-3" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
                 {leakPoints.map((point) => (
-                  <div key={point} className="flex items-start gap-3 rounded-lg border border-border/60 bg-card/50 px-4 py-3">
+                  <motion.div key={point} variants={fadeUp} className="flex items-start gap-3 rounded-lg border border-border/60 bg-card/50 px-4 py-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
                     <p>{point}</p>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
 
-            <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
-              <CardHeader>
-                <CardTitle className="text-xl">Pipeline Visibility + Conversion Tracking</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-muted-foreground">
-                <p>
-                  We install analytics, ad tracking, CRM integrations, and call infrastructure so you can see where
-                  leads come from, how quickly they’re contacted, and which ones turn into customers.
-                </p>
-                <div className="rounded-lg border border-border/60 bg-background/50 p-4 text-sm">
-                  <p className="text-foreground">Traffic → Website → Lead Capture → CRM → Follow-Up → Closed Customer</p>
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+              <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-xl">Speed + System + Visibility</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-muted-foreground">
+                  <p>
+                    We architect the system behind your revenue. Analytics, call infrastructure, CRM automation, and
+                    follow-up sequences — installed so you can see exactly where leads come from, how fast they're
+                    contacted, and which ones close.
+                  </p>
+                  <div className="rounded-lg border border-border/60 bg-background/50 p-4 text-sm">
+                    <p className="text-foreground">Traffic → Website → Lead Capture → CRM → Follow-Up → Closed Customer</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <FeaturesSection />
       <DeveloperExperience />
       <CodeSection />
 
-      <section id="about" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
+      <motion.section
+        id="about"
+        className="border-y border-border/40 bg-card/20 py-20 sm:py-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeUp}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
             <div className="space-y-4">
               <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">About SNRG Labs</h2>
               <p className="text-muted-foreground">
-                SNRG Labs is a web development and digital systems studio focused on building websites that actually
-                support business growth.
+                SNRG Labs builds revenue systems for businesses stuck in manual chaos. We're not an agency — we're a
+                technical operator that architects solutions and ships.
               </p>
               <p className="text-muted-foreground">
-                Beyond design and development, SNRG installs the core infrastructure businesses need to track leads,
-                run ads, and convert traffic into customers.
+                When others say "too complicated," "not possible," or "you need another team" — we build it anyway.
+                Advanced AI and automation applied to old business problems: missed calls, slow follow-up, low close
+                rates, and chaos.
               </p>
             </div>
 
-            <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
-              <CardHeader>
-                <CardTitle className="text-xl">Services include:</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-muted-foreground">
-                  {aboutServices.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Services</h2>
-            <p className="mt-4 text-muted-foreground">Clear systems built for real business outcomes.</p>
-          </div>
-
-          <div className="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-2">
-            {primaryServices.map((service) => (
-              <Card key={service.title} className="border-border/60 bg-card/50 text-foreground shadow-none">
+            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+              <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
                 <CardHeader>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                  <CardTitle className="text-xl">Services include:</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-2 text-xs font-medium uppercase tracking-wider text-accent">Includes</p>
                   <ul className="space-y-2 text-muted-foreground">
-                    {service.items.map((item) => (
+                    {aboutServices.map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" />
                         <span>{item}</span>
@@ -183,62 +185,135 @@ export default function HomePage() {
                   </ul>
                 </CardContent>
               </Card>
-            ))}
+            </motion.div>
           </div>
+        </div>
+      </motion.section>
+
+      <section id="services" className="py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="mx-auto max-w-3xl text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+          >
+            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Services</h2>
+            <p className="mt-4 text-muted-foreground">We don't hand you software. We deploy the systems behind your revenue.</p>
+          </motion.div>
+
+          <motion.div
+            className="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={stagger}
+          >
+            {primaryServices.map((service) => (
+              <motion.div key={service.title} variants={fadeUp}>
+                <Card className="border-border/60 bg-card/50 text-foreground shadow-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="mb-2 text-xs font-medium uppercase tracking-wider text-accent">Includes</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      {service.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       <section id="pricing" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
+          <motion.div
+            className="mx-auto max-w-3xl text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+          >
             <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Pricing</h2>
             <p className="mt-4 text-muted-foreground">Simple baseline pricing for builds and systems setup.</p>
-          </div>
+          </motion.div>
 
-          <div className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3">
+          <motion.div
+            className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={stagger}
+          >
             {pricingGroups.map((group) => (
-              <Card key={group.title} className="border-border/60 bg-card/50 text-foreground shadow-none">
-                <CardHeader>
-                  <CardTitle className="text-xl">{group.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {group.rows.map((row) => (
-                    <div key={row.name} className="rounded-lg border border-border/50 bg-background/50 p-3">
-                      <p className="text-sm text-foreground">{row.name}</p>
-                      <p className="mt-1 font-mono text-sm text-accent">{row.price}</p>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
+              <motion.div key={group.title} variants={fadeUp}>
+                <Card className="border-border/60 bg-card/50 text-foreground shadow-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{group.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    {group.rows.map((row) => (
+                      <div key={row.name} className="rounded-lg border border-border/50 bg-background/50 p-3">
+                        <p className="text-sm text-foreground">{row.name}</p>
+                        <p className="mt-1 font-mono text-sm text-accent">{row.price}</p>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section id="contact" className="py-20 sm:py-24">
+      <motion.section
+        id="contact"
+        className="py-20 sm:py-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeUp}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-card/40 p-10 text-center">
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Need a Website or Lead System Built?</h2>
+            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Ready to Stop Leaking Revenue?</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              SNRG Labs helps businesses launch modern websites and install the infrastructure needed to capture and
-              convert leads.
+              We build revenue systems for businesses stuck in manual chaos. Tell us what's broken — we'll build the
+              machine that fixes it.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" className="rounded-full">
-                <Link href="/contact">Start Your Project</Link>
+                <Link href="/contact">Build My System</Link>
               </Button>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="pb-12">
+      <motion.section
+        className="pb-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={fadeUp}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mx-auto max-w-4xl text-center text-lg font-medium md:text-xl">
-            SNRG Labs builds websites and installs the systems businesses need to generate and track leads.
+            SNRG Labs builds revenue systems for businesses stuck in manual chaos. Missed calls, slow follow-up, low
+            close rates — we build the machine behind it.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </main>

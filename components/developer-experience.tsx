@@ -5,10 +5,10 @@ import { Check, Activity } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
 
 const features = [
-  "Auto-prioritize fresh leads by intent and source quality.",
-  "Launch parallel dial streams with instant agent routing.",
-  "Qualify, tag, and sync outcomes in one continuous flow.",
-  "Book next steps the moment momentum appears on a call.",
+  "Respond faster than any competitor — calls trigger in seconds, not minutes.",
+  "Close more leads with parallel dial streams and instant agent routing.",
+  "Eliminate missed opportunities with automated follow-up that never stops.",
+  "Create full pipeline visibility — every lead tracked from source to sale.",
 ]
 
 const leadNames = ["Jordan Diaz", "Taylor Singh", "Riley Brooks", "Avery Chen", "Morgan Clark", "Casey Moore"]
@@ -143,11 +143,11 @@ export function DeveloperExperience() {
               <p className="font-mono text-sm font-medium uppercase tracking-wider text-accent">High Velocity</p>
             </div>
             <h2 className="mt-2 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-              A high-velocity revenue engine
+              Others sell tools. We deploy outcomes.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Capture new leads, connect in seconds, and push qualified conversations straight to the calendar without
-              slowing your team down.
+              Most agencies hand you software and a tutorial. We build systems that respond faster, close more leads,
+              reduce missed opportunities, and scale with less labor.
             </p>
             <ul className="mt-8 space-y-4">
               {features.map((feature, index) => (
