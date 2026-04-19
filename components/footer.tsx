@@ -19,9 +19,36 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-border/60 bg-card/40 p-8">
+    <footer className="relative overflow-hidden border-t border-border/40 bg-background">
+
+      {/* Globe watermark — blasted behind all footer content */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 flex items-center justify-center"
+      >
+        {/* outer glow halo */}
+        <div className="absolute h-[680px] w-[680px] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.12)_0%,rgba(6,182,212,0.06)_45%,transparent_70%)] blur-3xl" />
+        {/* the logo itself */}
+        <img
+          src="/snrg.svg"
+          alt=""
+          width={640}
+          height={640}
+          className="h-[640px] w-[640px] opacity-[0.11]"
+          style={{ mixBlendMode: "screen", animation: "globe-drift 18s ease-in-out infinite alternate" }}
+        />
+      </div>
+
+      <style>{`
+        @keyframes globe-drift {
+          0%   { transform: scale(1)    rotate(-1deg); opacity: 0.09; }
+          50%  { transform: scale(1.04) rotate( 1deg); opacity: 0.13; }
+          100% { transform: scale(1)    rotate(-1deg); opacity: 0.09; }
+        }
+      `}</style>
+
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-border/60 bg-card/40 p-8 backdrop-blur-sm">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <Link href="/" className="flex items-center gap-2">
