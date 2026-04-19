@@ -23,15 +23,17 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-border/60 bg-card/40 p-8">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground">
-                <span className="text-sm font-bold text-background">S</span>
-              </div>
-              <span className="text-lg font-semibold tracking-tight font-mono">SNRG Labs</span>
-            </Link>
-            <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Revenue systems for businesses stuck in manual chaos.
-            </p>
+            <div>
+              <Link href="/" className="flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground">
+                  <span className="text-sm font-bold text-background">S</span>
+                </div>
+                <span className="text-lg font-semibold tracking-tight font-mono">SNRG Labs</span>
+              </Link>
+              <p className="mt-4 max-w-xs text-sm text-muted-foreground">
+                Revenue systems for businesses stuck in manual chaos.
+              </p>
+            </div>
 
             <div>
               <h3 className="text-sm font-semibold">Product</h3>

@@ -417,7 +417,7 @@ export function HeroSection() {
             Revenue Systems + Automation
           </div>
 
-          <h1 className="font-mono text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl relative">
+          <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl relative">
             <span className="invisible" aria-hidden="true">
               <span className="text-balance">Websites That Drive Real Business</span>
             </span>
@@ -492,7 +492,23 @@ export function HeroSection() {
         <div ref={dashboardRef} className="mt-20 relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 blur-3xl opacity-50" />
 
-          <div className="relative overflow-x-auto pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
+          {/* Mobile KPI grid — shown only below lg */}
+          <div className="lg:hidden grid grid-cols-3 gap-3 mb-4">
+            {[
+              { label: "Open Leads", value: "186", delta: "+100%" },
+              { label: "Pipeline Value", value: "$2.8M", delta: "+280%" },
+              { label: "Conversion", value: "37%", delta: "+11%" },
+            ].map(({ label, value, delta }) => (
+              <div key={label} className="rounded-xl border border-border/40 bg-[#1c1c1c] p-3 text-center">
+                <p className="font-mono text-xl font-bold sm:text-2xl">{value}</p>
+                <p className="mt-1 text-[10px] text-muted-foreground">{label}</p>
+                <p className="text-[10px] text-green-400">{delta}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Full dashboard — hidden on mobile, shown lg+ */}
+          <div className="hidden lg:block relative overflow-x-auto pb-4">
             <div className="relative rounded-xl border border-border/60 bg-[#141414] backdrop-blur-sm overflow-hidden shadow-2xl min-w-[900px] lg:min-w-0">
               <div className="flex items-center justify-between border-b border-border/60 px-4 py-3 bg-[#1a1a1a]">
                 <div className="flex items-center gap-3">
@@ -761,12 +777,6 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="lg:hidden flex justify-center mt-2">
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>Scroll to explore</span>
-              <ArrowRight className="h-3 w-3 animate-pulse" />
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -23,8 +23,8 @@ function AutomatedPulseFlow() {
         <span className="text-xs text-zinc-400">Lead Sources → Hub → Sold</span>
       </div>
 
-      <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-3">
-        <svg viewBox="0 0 740 240" className="h-[220px] w-full">
+      <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-3 overflow-x-auto">
+        <svg viewBox="0 0 740 240" className="h-[220px] w-full min-w-[560px]">
           <defs>
             <filter id="pulseBlur" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="2.4" />

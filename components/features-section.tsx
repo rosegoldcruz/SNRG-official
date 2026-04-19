@@ -122,7 +122,7 @@ export function FeaturesSection() {
           <div
             ref={scrollRef}
             className={`flex gap-6 overflow-x-auto scrollbar-hide select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none", scrollSnapType: "x mandatory" }}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={handleMouseLeave}
             onMouseDown={handleMouseDown}
@@ -134,7 +134,8 @@ export function FeaturesSection() {
             {duplicatedFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="group relative flex-shrink-0 w-[320px] rounded-2xl border border-border/60 bg-card/50 p-8 transition-all hover:border-border hover:bg-card"
+                className="group relative flex-shrink-0 w-[80vw] sm:w-[320px] rounded-2xl border border-border/60 bg-card/50 p-8 transition-all hover:border-border hover:bg-card"
+                style={{ scrollSnapAlign: "start" }}
               >
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
                   <feature.icon className="h-6 w-6 text-foreground" />

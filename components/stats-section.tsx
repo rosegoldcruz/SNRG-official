@@ -34,7 +34,7 @@ export function StatsSection() {
   return (
     <section className="border-y border-border/40 bg-card/30">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {stats.map((stat, index) => (
             <div key={stat.label} className="text-center lg:text-center">
               <p className="font-mono text-5xl font-bold tracking-tight">
