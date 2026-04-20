@@ -9,30 +9,30 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   title: 'System Native Revenue Growth | SNRG Labs',
   description:
-    'We don\'t build websites. We build revenue growth systems — CRM automation, dialers, lead capture, and conversion infrastructure for businesses done leaving money on the table.',
+    'Your leads are coming in. Your follow-up isn\'t. SNRG Labs builds CRM automation, power dialers, and revenue systems for businesses done leaving money on the table.',
   manifest: '/manifest.webmanifest',
   openGraph: {
     type: 'website',
     url: 'https://snrglabs.com',
-    title: 'System Native Revenue Growth | SNRG Labs',
+    title: 'Your Leads Are Coming In. Your Follow-Up Isn\'t.',
     description:
-      'Stop leaking revenue. SNRG Labs builds the automation, telephony, and conversion infrastructure behind real business growth.',
+      'We don\'t build websites — we build the machine behind your revenue. CRM automation, dialers, lead capture, and follow-up systems. Tell me what\'s broken. I\'ll build the fix.',
     siteName: 'SNRG Labs',
     images: [
       {
-        url: 'https://snrglabs.com/og-image.png',
-        width: 512,
-        height: 512,
+        url: 'https://snrglabs.com/hero-video-poster.jpg',
+        width: 1280,
+        height: 700,
         alt: 'SNRG Labs — System Native Revenue Growth',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'System Native Revenue Growth | SNRG Labs',
+    title: 'Your Leads Are Coming In. Your Follow-Up Isn\'t.',
     description:
-      'Stop leaking revenue. SNRG Labs builds the automation, telephony, and conversion infrastructure behind real business growth.',
-    images: ['https://snrglabs.com/og-image.png'],
+      'We don\'t build websites — we build the machine behind your revenue. CRM automation, dialers, lead capture, and follow-up systems. Tell me what\'s broken. I\'ll build the fix.',
+    images: ['https://snrglabs.com/hero-video-poster.jpg'],
   },
   icons: {
     icon: [
