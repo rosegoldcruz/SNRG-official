@@ -7,10 +7,33 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'SNRG Labs | Revenue Engine CRM Systems for Home Services',
+  title: 'System Native Revenue Engines | SNRG Labs',
   description:
-    'SNRG Labs installs Revenue Engine CRM systems for home service businesses using GoHighLevel, lead pipelines, automated response, call tracking, GBP optimization, and local SEO.',
+    'Stop building "websites." I architect full-scale revenue engines with front-end conversion, back-end automation, and instant lead speed.',
   manifest: '/manifest.webmanifest',
+  openGraph: {
+    type: 'website',
+    url: 'https://snrglabs.com',
+    title: 'System Native Revenue Engines',
+    description:
+      'High-performance business infrastructure that automates lead handling and scales revenue. Not a website—a machine.',
+    siteName: 'SNRG Labs',
+    images: [
+      {
+        url: 'https://snrglabs.com/android-chrome-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'SNRG Labs — Revenue Engine Systems',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'System Native Revenue Engines | SNRG Labs',
+    description:
+      'High-performance business infrastructure that automates lead handling and scales revenue. Not a website—a machine.',
+    images: ['https://snrglabs.com/android-chrome-512x512.png'],
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
