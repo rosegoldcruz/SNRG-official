@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
 const SERVICES = [
-  { name: "GoHighLevel CRM Systems", href: "/services#crm-infrastructure" },
+  { name: "CRM & Automation Systems", href: "/services#crm-infrastructure" },
   { name: "Lead Pipelines & Automation", href: "/services#lead-capture-systems" },
   { name: "Call Tracking & SMS Response", href: "/services#revenue-infrastructure" },
   { name: "GBP Optimization", href: "/services#local-visibility" },

@@ -9,7 +9,7 @@ const features = [
   {
     icon: Workflow,
     title: "CRM Infrastructure",
-    description: "GoHighLevel pipelines, lead routing, automated follow-up sequences, booking flows, and reporting.",
+    description: "CRM pipelines, lead routing, automated follow-up sequences, booking flows, and reporting — built around whatever platform you're already on.",
   },
   {
     icon: PhoneCall,

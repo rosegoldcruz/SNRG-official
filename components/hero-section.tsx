@@ -459,9 +459,9 @@ export function HeroSection() {
                 <Zap className="h-4 w-4 text-accent" />
               </div>
               <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">CRM Infrastructure</p>
-              <h3 className="mt-2 text-lg font-semibold">GoHighLevel + Pipeline Design</h3>
+              <h3 className="mt-2 text-lg font-semibold">Any CRM, Fully Automated</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Full pipeline design, automated follow-up sequences, and lead routing so no lead falls through the cracks.
+                HubSpot, GoHighLevel, Salesforce, whatever you're on — we build the pipeline, routing, and follow-up sequences around your stack.
               </p>
             </div>
 

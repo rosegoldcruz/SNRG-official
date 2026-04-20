@@ -58,7 +58,7 @@ const primaryServices = [
   {
     title: "Automation & CRM Setup",
     description: "The pipeline, follow-up, and dialer infrastructure that stops leads from dying after the first touch.",
-    items: ["GoHighLevel CRM setup and configuration", "Sales pipeline and stage design", "Multi-touch automated follow-up sequences", "Power dialer and call tracking setup"],
+    items: ["CRM setup for any platform — HubSpot, GHL, Salesforce, and more", "Sales pipeline and stage design", "Multi-touch automated follow-up sequences", "Power dialer and call tracking setup"],
   },
 ]
 
