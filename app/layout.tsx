@@ -7,32 +7,32 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'System Native Revenue Engines | SNRG Labs',
+  title: 'System Native Revenue Growth | SNRG Labs',
   description:
-    'Stop building "websites." I architect full-scale revenue engines with front-end conversion, back-end automation, and instant lead speed.',
+    'We don\'t build websites. We build revenue growth systems — CRM automation, dialers, lead capture, and conversion infrastructure for businesses done leaving money on the table.',
   manifest: '/manifest.webmanifest',
   openGraph: {
     type: 'website',
     url: 'https://snrglabs.com',
-    title: 'System Native Revenue Engines',
+    title: 'System Native Revenue Growth | SNRG Labs',
     description:
-      'High-performance business infrastructure that automates lead handling and scales revenue. Not a website—a machine.',
+      'Stop leaking revenue. SNRG Labs builds the automation, telephony, and conversion infrastructure behind real business growth.',
     siteName: 'SNRG Labs',
     images: [
       {
-        url: 'https://snrglabs.com/android-chrome-512x512.png',
+        url: 'https://snrglabs.com/og-image.png',
         width: 512,
         height: 512,
-        alt: 'SNRG Labs — Revenue Engine Systems',
+        alt: 'SNRG Labs — System Native Revenue Growth',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'System Native Revenue Engines | SNRG Labs',
+    title: 'System Native Revenue Growth | SNRG Labs',
     description:
-      'High-performance business infrastructure that automates lead handling and scales revenue. Not a website—a machine.',
-    images: ['https://snrglabs.com/android-chrome-512x512.png'],
+      'Stop leaking revenue. SNRG Labs builds the automation, telephony, and conversion infrastructure behind real business growth.',
+    images: ['https://snrglabs.com/og-image.png'],
   },
   icons: {
     icon: [
