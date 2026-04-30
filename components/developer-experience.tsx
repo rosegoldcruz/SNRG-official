@@ -134,7 +134,7 @@ export function DeveloperExperience() {
   }, [hasAnimated])
 
   return (
-    <section ref={sectionRef} id="developer-experience" className="border-y border-border/40 bg-card/30 py-24 sm:py-24">
+    <section ref={sectionRef} id="developer-experience" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>

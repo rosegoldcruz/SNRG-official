@@ -101,7 +101,7 @@ export default function HomePage() {
 
       <motion.section
         id="problem"
-        className="border-y border-border/40 bg-card/20 py-20 sm:py-24"
+        className="bg-card/10 py-24 sm:py-32"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -116,7 +116,7 @@ export default function HomePage() {
               </p>
               <motion.div className="grid gap-3" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
                 {leakPoints.map((point) => (
-                  <motion.div key={point} variants={fadeUp} className="flex items-start gap-3 rounded-lg border border-border/60 bg-card/50 px-4 py-3">
+                  <motion.div key={point} variants={fadeUp} className="flex items-start gap-3 rounded-xl bg-white/[0.04] ring-1 ring-white/[0.05] px-4 py-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
                     <p>{point}</p>
                   </motion.div>
@@ -125,7 +125,7 @@ export default function HomePage() {
             </div>
 
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-              <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
+              <Card className="text-foreground">
                 <CardHeader>
                   <CardTitle className="text-xl">Speed + System + Visibility</CardTitle>
                 </CardHeader>
@@ -135,7 +135,7 @@ export default function HomePage() {
                     follow-up sequences — installed so you can see exactly where leads come from, how fast they're
                     contacted, and which ones close.
                   </p>
-                  <div className="rounded-lg border border-border/60 bg-background/50 p-4 text-sm">
+                  <div className="rounded-xl bg-black/40 ring-1 ring-white/[0.06] p-4 text-sm">
                     <p className="text-foreground">Traffic → Website → Lead Capture → CRM → Follow-Up → Closed Customer</p>
                   </div>
                 </CardContent>
@@ -151,7 +151,7 @@ export default function HomePage() {
 
       <motion.section
         id="about"
-        className="border-y border-border/40 bg-card/20 py-20 sm:py-24"
+        className="bg-card/10 py-24 sm:py-32"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -173,7 +173,7 @@ export default function HomePage() {
             </div>
 
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-              <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
+              <Card className="text-foreground">
                 <CardHeader>
                   <CardTitle className="text-xl">Services include:</CardTitle>
                 </CardHeader>
@@ -193,7 +193,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      <section id="services" className="py-20 sm:py-24">
+      <section id="services" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mx-auto max-w-3xl text-center"
@@ -215,7 +215,7 @@ export default function HomePage() {
           >
             {primaryServices.map((service) => (
               <motion.div key={service.title} variants={fadeUp}>
-                <Card className="border-border/60 bg-card/50 text-foreground shadow-none h-full">
+                <Card className="text-foreground h-full">
                   <CardHeader>
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <p className="text-sm text-muted-foreground">{service.description}</p>
@@ -238,7 +238,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="pricing" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
+      <section id="pricing" className="bg-card/10 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mx-auto max-w-3xl text-center"
@@ -260,13 +260,13 @@ export default function HomePage() {
           >
             {pricingGroups.map((group) => (
               <motion.div key={group.title} variants={fadeUp}>
-                <Card className="border-border/60 bg-card/50 text-foreground shadow-none h-full">
+                <Card className="text-foreground h-full">
                   <CardHeader>
                     <CardTitle className="text-xl">{group.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {group.rows.map((row) => (
-                      <div key={row.name} className="rounded-lg border border-border/50 bg-background/50 p-3">
+                      <div key={row.name} className="rounded-xl bg-white/[0.04] ring-1 ring-white/[0.04] p-3">
                         <p className="text-sm text-foreground">{row.name}</p>
                         <p className="mt-1 font-mono text-sm text-accent">{row.price}</p>
                       </div>
@@ -281,14 +281,14 @@ export default function HomePage() {
 
       <motion.section
         id="contact"
-        className="py-20 sm:py-24"
+        className="py-24 sm:py-32"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-card/40 p-10 text-center">
+          <div className="mx-auto max-w-3xl rounded-2xl bg-card/20 ring-1 ring-white/[0.07] p-10 sm:p-14 text-center">
             <h2 className="font-display text-3xl font-semibold sm:text-4xl">Ready to Stop Leaking Revenue?</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               We build revenue systems for businesses stuck in manual chaos. Tell us what's broken — we'll build the
@@ -304,7 +304,7 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section
-        className="pb-12"
+        className="pb-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}

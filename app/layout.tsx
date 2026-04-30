@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { GeistMono } from 'geist/font/mono'
-import { Inter, Syne } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -11,12 +11,6 @@ const inter = Inter({
   display: 'swap',
 })
 
-const syne = Syne({
-  subsets: ['latin'],
-  variable: '--font-syne',
-  weight: ['400', '600', '700', '800'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'System Native Revenue Growth | SNRG Labs',
@@ -76,7 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${inter.variable} ${syne.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans antialiased ${inter.variable} ${GeistMono.variable}`}>
         {children}
         <Analytics />
       </body>

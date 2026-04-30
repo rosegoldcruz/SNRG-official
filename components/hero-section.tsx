@@ -489,27 +489,11 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div ref={dashboardRef} className="mt-20 relative">
+        <div ref={dashboardRef} className="mt-16 relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 blur-3xl opacity-50" />
 
-          {/* Mobile KPI grid — shown only below lg */}
-          <div className="lg:hidden grid grid-cols-3 gap-3 mb-4">
-            {[
-              { label: "Open Leads", value: "186", delta: "+100%" },
-              { label: "Pipeline Value", value: "$2.8M", delta: "+280%" },
-              { label: "Conversion", value: "37%", delta: "+11%" },
-            ].map(({ label, value, delta }) => (
-              <div key={label} className="rounded-xl border border-border/40 bg-[#1c1c1c] p-3 text-center">
-                <p className="font-mono text-xl font-bold sm:text-2xl">{value}</p>
-                <p className="mt-1 text-[10px] text-muted-foreground">{label}</p>
-                <p className="text-[10px] text-green-400">{delta}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Full dashboard — horizontal scroll on mobile, native on lg+ */}
-          <div className="relative overflow-x-auto pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
-            <div className="relative rounded-xl border border-border/60 bg-[#141414] backdrop-blur-sm overflow-hidden shadow-2xl min-w-[900px] lg:min-w-0">
+          <div className="relative">
+            <div className="relative rounded-2xl border border-border/30 bg-[#141414] overflow-hidden shadow-2xl">
               <div className="flex items-center justify-between border-b border-border/60 px-4 py-3 bg-[#1a1a1a]">
                 <div className="flex items-center gap-3">
                   <div className="flex gap-1.5">
@@ -519,12 +503,12 @@ export function HeroSection() {
                   </div>
                   <span className="text-xs text-muted-foreground font-mono">SNRG Revenue Engine dashboard</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <div className="flex items-center gap-3">
+                  <div className="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
                     <Globe className="h-3 w-3" />
                     <span>Active Leads</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
                     <Clock className="h-3 w-3" />
                     <span>Response Speed: Excellent</span>
                   </div>
@@ -535,7 +519,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 p-4 border-b border-border/60 bg-[#181818]">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3 sm:gap-4 sm:p-4 border-b border-border/30 bg-[#181818]">
                 <div className="rounded-xl border border-border/40 bg-[#1c1c1c] p-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium">Opportunity Status</h3>
@@ -673,8 +657,8 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-5 gap-4 p-4 min-h-[360px] bg-[#151515]">
-                <div className="col-span-3 rounded-xl border border-border/40 bg-[#1c1c1c] p-4">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 p-3 sm:gap-4 sm:p-4 bg-[#151515]">
+                <div className="col-span-1 lg:col-span-3 rounded-xl border border-border/40 bg-[#1c1c1c] p-4">
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-sm font-medium">Funnel</h3>
                     <span className="rounded-md border border-border/60 px-2 py-0.5 text-[10px] text-muted-foreground">
@@ -709,7 +693,7 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                <div className="col-span-2 rounded-xl border border-border/40 bg-[#1c1c1c] p-4">
+                <div className="col-span-1 lg:col-span-2 rounded-xl border border-border/40 bg-[#1c1c1c] p-4">
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-sm font-medium">Stage Distribution</h3>
                     <span className="rounded-md border border-border/60 px-2 py-0.5 text-[10px] text-muted-foreground">
@@ -723,7 +707,7 @@ export function HeroSection() {
                       +100% vs Last 31 Days
                     </span>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
                     <div className="relative h-28 w-28 flex-shrink-0">
                       <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90">
                         {(() => {
@@ -760,7 +744,7 @@ export function HeroSection() {
                         </div>
                       </div>
                     </div>
-                    <div className="space-y-1 text-[10px]">
+                    <div className="space-y-1.5 text-[10px] w-full min-w-0">
                       {stageDistribution.map((item, i) => (
                         <div key={i} className="flex items-center justify-between gap-3">
                           <div className="flex items-center gap-1.5">
@@ -774,13 +758,6 @@ export function HeroSection() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="lg:hidden flex justify-center mt-3">
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>Swipe to explore</span>
-              <ArrowRight className="h-3 w-3 animate-pulse" />
             </div>
           </div>
         </div>
