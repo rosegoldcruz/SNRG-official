@@ -11,6 +11,7 @@ import { FeaturesSection } from "@/components/features-section"
 import { DeveloperExperience } from "@/components/developer-experience"
 import { CodeSection } from "@/components/code-section"
 import { Footer } from "@/components/footer"
+import { MobileNav } from "@/components/mobile-nav"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -90,7 +91,9 @@ const pricingGroups = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground pb-[80px] md:pb-0"
+          style={{ paddingBottom: "calc(80px + env(safe-area-inset-bottom, 0px))" }}
+    >
       <Navbar />
       <HeroSection />
       <StatsSection />
@@ -316,6 +319,7 @@ export default function HomePage() {
       </motion.section>
 
       <Footer />
+      <MobileNav />
     </main>
   )
 }

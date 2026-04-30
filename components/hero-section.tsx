@@ -507,8 +507,8 @@ export function HeroSection() {
             ))}
           </div>
 
-          {/* Full dashboard — hidden on mobile, shown lg+ */}
-          <div className="hidden lg:block relative overflow-x-auto pb-4">
+          {/* Full dashboard — horizontal scroll on mobile, native on lg+ */}
+          <div className="relative overflow-x-auto pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
             <div className="relative rounded-xl border border-border/60 bg-[#141414] backdrop-blur-sm overflow-hidden shadow-2xl min-w-[900px] lg:min-w-0">
               <div className="flex items-center justify-between border-b border-border/60 px-4 py-3 bg-[#1a1a1a]">
                 <div className="flex items-center gap-3">
@@ -777,6 +777,12 @@ export function HeroSection() {
             </div>
           </div>
 
+          <div className="lg:hidden flex justify-center mt-3">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <span>Swipe to explore</span>
+              <ArrowRight className="h-3 w-3 animate-pulse" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
