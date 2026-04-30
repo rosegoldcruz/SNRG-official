@@ -107,7 +107,7 @@ export function FeaturesSection() {
             <Sparkles className="h-4 w-4" />
             <span className="font-mono uppercase tracking-wider">What We Install</span>
           </div>
-          <h2 className="mt-4 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
+          <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl text-balance">
             Revenue Infrastructure. Outbound Machines. Conversion Assets.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

@@ -57,7 +57,7 @@ export function TestimonialsSection() {
   return (
     <section className="py-16 border-y border-border/40 bg-card/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-mono text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="text-center font-display text-3xl font-semibold sm:text-4xl">
           Trusted by home service teams that need measurable revenue.
         </h2>
 

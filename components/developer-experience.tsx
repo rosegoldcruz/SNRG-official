@@ -142,7 +142,7 @@ export function DeveloperExperience() {
               <Activity className="h-4 w-4 text-accent" />
               <p className="font-mono text-sm font-medium uppercase tracking-wider text-accent">High Velocity</p>
             </div>
-            <h2 className="mt-2 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
+            <h2 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-balance">
               Others sell tools. We deploy outcomes.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

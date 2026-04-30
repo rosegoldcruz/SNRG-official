@@ -107,7 +107,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
             <div className="space-y-4">
-              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Where Revenue Gets Left on the Table</h2>
+              <h2 className="font-display text-3xl font-semibold sm:text-4xl">Where Revenue Gets Left on the Table</h2>
               <p className="text-muted-foreground">
                 When growth stalls, it's rarely because of a lack of demand. It's the system behind it.
               </p>
@@ -157,7 +157,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
             <div className="space-y-4">
-              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">About SNRG Labs</h2>
+              <h2 className="font-display text-3xl font-semibold sm:text-4xl">About SNRG Labs</h2>
               <p className="text-muted-foreground">
                 SNRG Labs builds revenue systems for businesses stuck in manual chaos. We're not an agency — we're a
                 technical operator that architects solutions and ships.
@@ -199,7 +199,7 @@ export default function HomePage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeUp}
           >
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Services</h2>
+            <h2 className="font-display text-3xl font-semibold sm:text-4xl">Services</h2>
             <p className="mt-4 text-muted-foreground">We don't hand you software. We deploy the systems behind your revenue.</p>
           </motion.div>
 
@@ -244,7 +244,7 @@ export default function HomePage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeUp}
           >
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Pricing</h2>
+            <h2 className="font-display text-3xl font-semibold sm:text-4xl">Pricing</h2>
             <p className="mt-4 text-muted-foreground">Simple baseline pricing for builds and systems setup.</p>
           </motion.div>
 
@@ -286,7 +286,7 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-card/40 p-10 text-center">
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Ready to Stop Leaking Revenue?</h2>
+            <h2 className="font-display text-3xl font-semibold sm:text-4xl">Ready to Stop Leaking Revenue?</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               We build revenue systems for businesses stuck in manual chaos. Tell us what's broken — we'll build the
               machine that fixes it.

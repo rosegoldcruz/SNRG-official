@@ -33,7 +33,7 @@ export function EnterpriseSection() {
             <Building2 className="h-4 w-4" />
             <span className="font-mono uppercase tracking-wider">Scale</span>
           </div>
-          <h2 className="mt-4 font-mono text-3xl font-bold tracking-tight sm:text-4xl">Built for Massive Scale</h2>
+          <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">Built for Massive Scale</h2>
           <p className="mt-4 text-muted-foreground">
             Trusted by high-volume operations to handle millions of minutes with enterprise-grade reliability and
             ironclad compliance.

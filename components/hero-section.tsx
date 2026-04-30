@@ -417,7 +417,7 @@ export function HeroSection() {
             Revenue Systems + Automation
           </div>
 
-          <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl relative">
+          <h1 className="font-display text-4xl font-bold sm:text-7xl lg:text-8xl xl:text-9xl relative">
             <span className="invisible" aria-hidden="true">
               <span className="text-balance">Websites That Drive Real Business</span>
             </span>

@@ -197,7 +197,7 @@ export function CodeSection() {
             <Bolt className="h-4 w-4 text-accent" />
             <p className="text-sm font-medium uppercase tracking-wider text-accent">The Engine</p>
           </div>
-          <h2 className="mt-2 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
+          <h2 className="mt-2 font-display text-3xl font-semibold sm:text-4xl text-balance">
             High-Velocity Revenue Engine
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

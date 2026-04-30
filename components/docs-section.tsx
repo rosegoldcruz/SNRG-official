@@ -49,7 +49,7 @@ export function DocsSection() {
             <Book className="h-4 w-4" />
             <span className="font-mono uppercase tracking-wider">Documentation</span>
           </div>
-          <h2 className="mt-4 font-mono text-3xl font-bold tracking-tight sm:text-4xl">Everything you need to know</h2>
+          <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">Everything you need to know</h2>
           <p className="mt-4 text-muted-foreground">
             Comprehensive documentation to help you get started and master every feature of SNRG Labs systems.
           </p>

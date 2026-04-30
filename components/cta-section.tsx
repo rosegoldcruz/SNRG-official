@@ -23,7 +23,7 @@ export function CTASection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
+          <h2 className="font-display text-3xl font-semibold sm:text-4xl text-balance">
             Get Your Revenue Engine Installed
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
